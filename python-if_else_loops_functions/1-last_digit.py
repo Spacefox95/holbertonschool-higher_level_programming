@@ -11,6 +11,8 @@ if (number > 0):
     else:
         print("{} and is less than 6 and not 0".format(o))
 if (number < 0):
-    number = number * -1
-    o = number % 10
-    print("-{} and is less than 6 and not 0".format(o))
+    o = -number % 10
+    if (o) != 0:
+        print("-{} and is less than 6 and not 0".format(o))
+    if (o) == 0:
+            print("{} and is 0".format(o))
