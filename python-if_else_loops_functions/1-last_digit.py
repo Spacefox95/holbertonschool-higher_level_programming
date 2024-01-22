@@ -12,7 +12,7 @@ if (number > 0):
         print("{} and is less than 6 and not 0".format(o))
 if (number < 0):
     o = -number % 10
-    if (o) != 0:
-        print("-{} and is less than 6 and not 0".format(o))
     if (o) == 0:
-            print("{} and is 0".format(o))
+        print("{} and is 0".format(o))
+    else:
+        print("-{} and is less than 6 and not 0".format(o))
