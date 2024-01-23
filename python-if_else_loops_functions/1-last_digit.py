@@ -16,4 +16,4 @@ elif number < 0:
     if o == 0:
         print("{} and is 0".format(o))
     else:
-        print("-{} and is less than 6 and not 0".format(o))
+        print("{} and is less than 6 and not 0".format(o * -1))
