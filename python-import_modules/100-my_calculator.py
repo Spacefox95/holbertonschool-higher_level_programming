@@ -2,9 +2,9 @@
 if __name__ == "__main__":
     from sys import argv
 from calculator_1 import add, sub, mul, div
-a = argv[1]
-b = argv[3]
 if len(argv) == 4:
+    a = argv[1]
+    b = argv[3]
     if argv[2] == "+":
         print("{} + {} = {}".format(a, b, add(int(a), int(b))))
     elif argv[2] == "-":
