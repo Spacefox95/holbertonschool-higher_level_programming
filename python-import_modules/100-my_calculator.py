@@ -3,16 +3,16 @@ if __name__ == "__main__":
     from sys import argv
 from calculator_1 import add, sub, mul, div
 if len(argv) == 4:
-    a = argv[1]
-    b = argv[3]
+    a = int(argv[1])
+    b = int(argv[3])
     if argv[2] == "+":
-        print("{} + {} = {}".format(a, b, add(int(a), int(b))))
+        print("{} + {} = {}".format(a, b, add(a, b)))
     elif argv[2] == "-":
-        print("{} - {} = {}".format(a, b, sub(int(a), int(b))))
+        print("{} - {} = {}".format(a, b, sub(a, b)))
     elif argv[2] == "*":
-        print("{} * {} = {}".format(a, b, mul(int(a), int(b))))
+        print("{} * {} = {}".format(a, b, mul(a, b)))
     elif argv[2] == "/":
-        print("{} / {} = {}".format(a, b, div(int(a), int(b))))
+        print("{} / {} = {}".format(a, b, div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
