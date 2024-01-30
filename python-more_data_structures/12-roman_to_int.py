@@ -7,6 +7,6 @@ def roman_to_int(roman_string):
             for key in num:
                 if i == key:
                     a += num.get(key)
-        return a
+        return int(a)
     else:
         return 0
