@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    a = 0
+    num = {'I': 1, 'V': 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+    result = 0
+    prev_value = 0
     if isinstance(roman_string, str) is True:
-        num = {'I': 1, 'V': 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
-        for i in roman_string:
-            for key in num:
-                if i == key:
-                    a += num.get(key)
-                    if a > 3999:
-                        return 0
-        return a
+        for i in reversed(roman_string):
+            value = num.get(i, 0)
+            if value >= prev_value:
+                result += value
+            else:
+                result -= value
+            prev_value = value
+        return result
     else:
         return 0
