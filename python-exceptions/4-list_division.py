@@ -5,8 +5,8 @@ def list_division(my_list_1, my_list_2, list_length):
     for i in range(list_length):
         sum = 0
         try:
-            num1 = my_list_1[i] if i < len(my_list_1) else 0
-            num2 = my_list_2[i] if i < len(my_list_2) else 0
+            num1 = my_list_1[i]
+            num2 = my_list_2[i]
             sum = num1 / num2
         except ZeroDivisionError:
             print("division by 0")
