@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+
+
+def print_dict(a_dictionary):
+	i = 0
+	for i in range(len(a)):
+		print(a_dictionary.items[i])
