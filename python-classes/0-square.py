@@ -1,4 +1,4 @@
-#!/bin/usr/python
+#!/bin/usr/python3
 """
 This module defines the square class
 """
