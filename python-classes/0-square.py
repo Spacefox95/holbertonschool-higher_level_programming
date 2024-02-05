@@ -1,11 +1,9 @@
 #!/bin/usr/python
 '''
-my_module 0-square
-Defines class square
+This module defines the square class
 '''
-# Square class
 
 
 class Square:
-    ''' Define a square '''
+    ''' For now, an empty class with no attributes or methods '''
     pass
