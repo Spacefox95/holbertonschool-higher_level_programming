@@ -8,7 +8,7 @@ It includes a size attribute
 class Square:
     """
     Square : Class that represents a square
-    Attributes: 
+    Attributes:
     - size (int): the size of the square.
 
     """
