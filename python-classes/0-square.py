@@ -3,6 +3,7 @@
 my_module 0-square
 Defines class square
 '''
+# Square class
 
 
 class Square:
