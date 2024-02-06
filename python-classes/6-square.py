@@ -87,8 +87,6 @@ class Square:
         - size : the size of the square
         - position: the position of the square
         """
-        for a in range(self.position[1]):
-            print()
         for i in range(self.size):
             for j in range(self.position[0]):
                 print(" ", end='')
