@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """
 Square : This module defines the Square class
 It includes a size attribute
