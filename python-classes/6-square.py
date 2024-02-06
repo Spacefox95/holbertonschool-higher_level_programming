@@ -95,5 +95,5 @@ class Square:
             for c in range(self.size):
                 print("#", end='')
             print()
-        if self.size == 0:
+        if self.size == 0 or self.position[1] > 0:
             print()
