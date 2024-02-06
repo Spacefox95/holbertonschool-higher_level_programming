@@ -1,34 +1,34 @@
 # Tests for add_integer function
-> > > add_integer = __import__('0-add_integer').add_integer
+>>> add_integer = __import__('0-add_integer').add_integer
 
 # Test Case 1: Adding two integers
-> > > add_integer(3, 5)
+>>> add_integer(3, 5)
 8
 
 # Test Case 2: Adding an integer and a float
-> > > add_integer(10, 2.5)
+>>> add_integer(10, 2.5)
 12
 
 # Test Case 3: Adding two floats
-> > > add_integer(2.5, 7.5)
+>>> add_integer(2.5, 7.5)
 9
 
 # Test Case 4: Adding a negative integer and a positive integer
-> > > add_integer(-8, 4)
+>>> add_integer(-8, 4)
 -4
 
 # Test Case 5: Adding an integer and an integer
-> > > add_integer(54, 4)
+>>> add_integer(54, 4)
 58
 
 # Test Case 6: Adding two floats
-> > > add_integer(2.5, 7.5)
+>>> add_integer(2.5, 7.5)
 9
 
 # Test Case 7: Adding a negative integer and a positive integer
-> > > add_integer(-8, 4)
+>>> add_integer(-8, 4)
 -4
 
 # Test Case 8: Adding an integer and an integer
-> > > add_integer(54, 4)
+>>> add_integer(54, 4)
 58
