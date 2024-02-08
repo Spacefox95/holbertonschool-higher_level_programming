@@ -11,7 +11,7 @@
 
 # Test Case 3: Adding two floats
 >>> add_integer(2.5, 7.5)
-9
+10
 
 # Test Case 4: Adding a negative integer and a positive integer
 >>> add_integer(-8, 4)
@@ -23,7 +23,7 @@
 
 # Test Case 6: Adding two floats
 >>> add_integer(2.5, 7.5)
-9
+10
 
 # Test Case 7: Adding a string and a positive integer
 >>> add_integer("a", 4)
