@@ -25,10 +25,14 @@
 >>> add_integer(2.5, 7.5)
 9
 
-# Test Case 7: Adding a negative integer and a positive integer
->>> add_integer(-8, 4)
--4
+# Test Case 7: Adding a string and a positive integer
+>>> add_integer("a", 4)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
 
-# Test Case 8: Adding an integer and an integer
->>> add_integer(54, 4)
-58
+# Test Case 8: Adding an integer and a string
+>>> add_integer(54, "b")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer

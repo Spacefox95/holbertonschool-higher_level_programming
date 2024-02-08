@@ -1,0 +1,27 @@
+Tests for add_integer function
+>>> print_square = __import__('4-print_square').print_square
+
+Test Case 1: prints My name is <first name> <last name>
+>>> print_square(4)
+####
+####
+####
+####
+
+Test Case 2: prints square if isn't an integer
+>>> print_square('n')
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+Test Case 3: prints square if size < 0
+>>> print_square(-2)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+Test Case 4: prints square if size < 0 and size is a float
+>>> print_square(-2.2)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer

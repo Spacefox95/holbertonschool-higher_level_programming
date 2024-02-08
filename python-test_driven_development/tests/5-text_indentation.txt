@@ -1,0 +1,26 @@
+# Tests text_indentation function
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test Case 1: prints a text with indentation on '.'
+>>> text_indentation("This is a test text. I'm sexy and i know it")
+This is a test text.
+<BLANKLINE>
+I'm sexy and i know it
+
+# Test Case 2: prints a text with indentation on '?'
+>>> text_indentation("This is a test text? I'm sexy and i know it")
+This is a test text?
+<BLANKLINE>
+I'm sexy and i know it
+
+# Test Case 3: prints a text with indentation on ':'
+>>> text_indentation("This is a test text: I'm sexy and i know it")
+This is a test text:
+<BLANKLINE>
+I'm sexy and i know it
+
+# Test Case 4: prints a text with an integer
+>>> text_indentation(4)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string

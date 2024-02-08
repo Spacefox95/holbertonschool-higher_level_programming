@@ -1,0 +1,22 @@
+# Tests for add_integer function
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Test Case 1: prints My name is <first name> <last name>
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+# Test Case 2: prints My name is <first name>
+>>> say_my_name("John")
+My name is John 
+
+# Test Case 3: prints My name is <first name> <last name> with integer as first_name
+>>> say_my_name(45, "Smith")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test Case 4: prints My name is <first name> <last name> with integer as last_name
+>>> say_my_name("John", 45)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
