@@ -21,12 +21,22 @@ Traceback (most recent call last):
 ValueError: size must be >= 0
 
 Test Case 4: prints square if size < 0 and size is a float
->>> print_square(-2.2)
+>>> print_square(2.2)
 Traceback (most recent call last):
     ...
 TypeError: size must be an integer
 
 Test Case 5: print a square with no value
+>>> print_square()
 Traceback (most recent call last):
     ...
 TypeError: print_square() missing 1 required positional argument: 'size'
+
+Test Case 6: print a square 0
+>>> print_square(0)
+
+Test Case 7: print a None square
+>>> print_square(None)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
