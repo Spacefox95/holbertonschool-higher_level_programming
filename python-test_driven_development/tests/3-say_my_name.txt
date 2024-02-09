@@ -1,3 +1,4 @@
+# doctest_4-say_my_name
 The 'example' module
 ====================
 
