@@ -33,4 +33,12 @@ Traceback (most recent call last):
     ...
 ZeroDivisionError: division by zero
 
-# Test Case 7: Divide
+# Test Case 7: Divide an empty matrix
+>>> matrix_divided([[],[]], 3)
+[[], []]
+
+# Test Case 8: Divide an empty list
+>>> matrix_divided([], 3)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
