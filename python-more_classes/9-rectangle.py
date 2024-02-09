@@ -137,4 +137,5 @@ class Rectangle:
         Class method :
         Square instance : create a square from Rectangle
         """
-        return Rectangle(size, size)
+        Rectangle.width = Rectangle.height = size
+        return Rectangle(Rectangle.width, Rectangle.height)
