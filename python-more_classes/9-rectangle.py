@@ -138,4 +138,4 @@ class Rectangle:
         Square instance : create a square from Rectangle
         """
         Rectangle.size = cls.width = cls.height
-        return cls(size, size)
+        return Rectangle(size, size)
