@@ -36,7 +36,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         """
@@ -53,13 +53,13 @@ class Rectangle:
         Initialize an instance of representation of object Rectangle
         Return the object with his attributes
         """
-        return f'Rectangle({self.width}, {self.height})'
+        return ("Rectangle({}, {}".format(self.width, self.height))
 
     def __del__(self):
         """
         Initialize a message when instance Rectangle is deleted
         """
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
