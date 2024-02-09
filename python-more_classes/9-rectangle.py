@@ -133,6 +133,6 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """
-        Class method : Square instance : create a square from Rectangle
+        Square :create a square from Rectangle with width == height == size
         """
         return cls(size, size)
