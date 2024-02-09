@@ -34,8 +34,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-        Rectangle.number_of_instances += 1
-        self.number_of_instances = Rectangle.number_of_instances
+        type(self).number_of_instances += 1
 
     def __str__(self):
         """
@@ -58,7 +57,7 @@ class Rectangle:
         """
         Initialize a message when instance Rectangle is deleted
         """
-        Rectangle.number_of_instances -= 1
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
@@ -134,8 +133,6 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """
-        Class method :
-        Square instance : create a square from Rectangle
+        Class method : Square instance : create a square from Rectangle
         """
-        cls.width = cls.height = size
         return cls(size, size)
