@@ -53,7 +53,7 @@ class Rectangle:
         Initialize an instance of representation of object Rectangle
         Return the object with his attributes
         """
-        return ("Rectangle({}, {}".format(self.width, self.height))
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
         """
@@ -123,6 +123,9 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """
+        Static method
+        """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif not isinstance(rect_2, Rectangle):
