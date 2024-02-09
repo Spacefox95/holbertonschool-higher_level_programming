@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """
 Rectangle : This module defines the Rectangle class
 It includes a width and a height attributes
