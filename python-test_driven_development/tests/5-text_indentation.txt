@@ -24,3 +24,9 @@ I'm sexy and i know it
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
+
+# Test Case 5: print an empty text
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
