@@ -137,4 +137,4 @@ class Rectangle:
         Class method :
         Square instance : create a square from Rectangle
         """
-        return cls(size, size)
+        return Rectangle(size, size)
