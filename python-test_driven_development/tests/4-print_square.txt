@@ -1,4 +1,4 @@
-Tests for add_integer function
+# doctest_5-text_indentation
 >>> print_square = __import__('4-print_square').print_square
 
 Test Case 1: prints My name is <first name> <last name>
