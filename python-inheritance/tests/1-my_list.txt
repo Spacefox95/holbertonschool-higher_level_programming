@@ -57,3 +57,10 @@ TypeError: list.append() takes exactly one argument (0 given)
 >>> my_list.append(1)
 >>> repr(my_list)
 '[1]'
+
+>>> my_list = MyList(4)
+Traceback (most recent call last):
+    ...
+TypeError: 'int' object is not iterable
+>>> my_list.print_sorted()
+[1]
