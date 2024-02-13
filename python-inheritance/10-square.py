@@ -34,3 +34,9 @@ class Square(Rectangle):
         Correct output for square
         """
         return "[Rectangle] {}/{}".format(self.__size, self.__size)
+
+    def area(self):
+        """
+        Return the area of the rectangle
+        """
+        return self.__size * self.__size
