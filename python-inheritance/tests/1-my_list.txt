@@ -70,3 +70,34 @@ TypeError: 'int' object is not iterable
 >>> my_list.append(False)
 >>> my_list.print_sorted()
 [False, True]
+
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+    ...
+TypeError: 'NoneType' object is not iterable
+
+>>> my_list = MyList([1, "Hello", 2])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+>>> my_list = MyList([1, 4], [3, 2])
+Traceback (most recent call last):
+    ...
+TypeError: list expected at most 1 argument, got 2
+
+>>> list_no_exist.print_sorted()
+Traceback (most recent call last):
+    ...
+NameError: name 'list_no_exist' is not defined
+
+>>> my_list = MyList()
+
+>>> my_list = MyList()
+>>> my_list += [3]
+>>> my_list.print_sorted()
+[3]
+
+>>> my_list = MyList()
+>>> isinstance(my_list, list)
+True
