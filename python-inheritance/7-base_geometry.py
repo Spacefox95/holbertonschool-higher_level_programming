@@ -27,6 +27,8 @@ class BaseGeometry:
         """
         Check is the value is correct
         """
+        if not isinstance(name, str):
+            raise TypeError("{} must be a string".format(name))
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
         elif value <= 0:

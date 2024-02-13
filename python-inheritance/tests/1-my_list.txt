@@ -67,5 +67,6 @@ TypeError: 'int' object is not iterable
 
 >>> my_list = MyList()
 >>> my_list.append(True)
+>>> my_list.append(False)
 >>> my_list.print_sorted()
-[True]
+[False, True]
