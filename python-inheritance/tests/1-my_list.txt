@@ -34,3 +34,26 @@ NameError: name 'b' is not defined
 >>> my_list.append(2.2)
 >>> my_list.print_sorted()
 [1, 2.2]
+
+>>> my_list = MyList()
+>>> my_list.append()
+Traceback (most recent call last):
+    ...
+TypeError: list.append() takes exactly one argument (0 given)
+>>> my_list.print_sorted()
+[]
+
+>>> my_list = MyList()
+>>> my_list.append('b')
+>>> my_list.print_sorted()
+['b']
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> str(my_list)
+'[1]'
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> repr(my_list)
+'[1]'
