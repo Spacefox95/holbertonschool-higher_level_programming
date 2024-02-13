@@ -36,9 +36,9 @@ class Rectangle(BaseGeometry):
         - width(int) is a private instance
         - height(int) is a private instance
         """
-        super().integer_validator("width", width)
+        self.integer_validator("width", width)
         self.__width = width
-        super().integer_validator("height", height)
+        self.integer_validator("height", height)
         self.__height = height
 
     def area(self):

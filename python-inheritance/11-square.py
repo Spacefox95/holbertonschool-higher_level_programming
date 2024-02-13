@@ -25,15 +25,9 @@ class Square(Rectangle):
         Initialize size
         Check integer
         """
-        super().__init__(size, size)
-        super().integer_validator("size", size)
         self.__size = size
-
-    def __str__(self):
-        """
-        Correct output for square
-        """
-        return "[Square] {}/{}".format(self.__size, self.__size)
+        self.integer_validator("size", size)
+        super().__init__(size, size)
 
     def area(self):
         """
