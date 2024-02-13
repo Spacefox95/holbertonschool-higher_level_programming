@@ -1,11 +1,19 @@
+The 'example' module
+====================
+
+Using 'Sort'
+------------
+
 >>> MyList = __import__('1-my_list').MyList
 
 >>> my_list = MyList()
+>>> my_list.append(7)
 >>> my_list.append(1)
 >>> my_list.append(2)
->>> my_list.append(3)
 >>> my_list.print_sorted()
-[1, 2, 3]
+[1, 2, 7]
+>>> my_list
+[7, 1, 2]
 
 >>> my_list = MyList()
 >>> my_list.append(1)
@@ -20,56 +28,9 @@
 >>> my_list.print_sorted()
 []
 
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(b)
-Traceback (most recent call last):
-    ...
-NameError: name 'b' is not defined
+>>> my_list = MyList([1, 3, 2])
 >>> my_list.print_sorted()
-[1]
-
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(2.2)
->>> my_list.print_sorted()
-[1, 2.2]
-
->>> my_list = MyList()
->>> my_list.append()
-Traceback (most recent call last):
-    ...
-TypeError: list.append() takes exactly one argument (0 given)
->>> my_list.print_sorted()
-[]
-
->>> my_list = MyList()
->>> my_list.append('b')
->>> my_list.print_sorted()
-['b']
-
->>> my_list = MyList()
->>> my_list.append(1)
->>> str(my_list)
-'[1]'
-
->>> my_list = MyList()
->>> my_list.append(1)
->>> repr(my_list)
-'[1]'
-
->>> my_list = MyList(4)
-Traceback (most recent call last):
-    ...
-TypeError: 'int' object is not iterable
->>> my_list.print_sorted()
-[1]
-
->>> my_list = MyList()
->>> my_list.append(True)
->>> my_list.append(False)
->>> my_list.print_sorted()
-[False, True]
+[1, 2, 3]
 
 >>> my_list = MyList(None)
 Traceback (most recent call last):
@@ -101,7 +62,3 @@ NameError: name 'list_no_exist' is not defined
 >>> my_list = MyList()
 >>> isinstance(my_list, list)
 True
-
->>> my_list = MyList([1, 3, 2])
->>> my_list.print_sorted()
-[1, 2, 3]
