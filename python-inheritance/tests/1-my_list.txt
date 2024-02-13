@@ -64,3 +64,8 @@ Traceback (most recent call last):
 TypeError: 'int' object is not iterable
 >>> my_list.print_sorted()
 [1]
+
+>>> my_list = MyList()
+>>> my_list.append(True)
+>>> my_list.print_sorted()
+[True]
