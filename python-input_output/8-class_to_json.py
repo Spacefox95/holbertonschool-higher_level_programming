@@ -8,8 +8,7 @@
   - boolean
  for JSON serialization of an object
 """
-import json
 
 
 def class_to_json(obj):
-    return json.dumps(obj, default=lambda o: o.__dict__)
+    return obj.__dict__
