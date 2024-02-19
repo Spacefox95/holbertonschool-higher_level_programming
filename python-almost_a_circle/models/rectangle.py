@@ -48,6 +48,12 @@ class Rectangle(Base):
         else:
             return value
 
+    def area(self):
+        """
+        Return the area value of the Rectangle
+        """
+        return self.width * self.height
+
     @property
     def width(self):
         """
