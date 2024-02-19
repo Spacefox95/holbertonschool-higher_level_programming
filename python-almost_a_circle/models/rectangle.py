@@ -20,12 +20,11 @@ class Rectangle(Base):
         - y
         - id
         """
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        self.id = id
-        super().__init__(self.id)
 
 
 @property
@@ -65,21 +64,21 @@ def y(self):
 
 
 @width.setter
-def width(self):
+def width(self, value):
     """
     Setter
     Arg = width : set width
     """
-    self.__width = width
+    self.__width = value
 
 
 @height.setter
-def height(self):
+def height(self, value):
     """
     Setter
     Arg = height : set height
     """
-    self.__height = height
+    self.__height = value
 
 
 @x.setter
