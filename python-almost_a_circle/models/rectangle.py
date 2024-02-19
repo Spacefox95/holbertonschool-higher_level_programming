@@ -26,74 +26,66 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    @property
+    def width(self):
+        """
+        Getter
+        Return private instance attribute width
+        """
+        return self.__width
 
-@property
-def width(self):
-    """
-    Getter
-    Return private instance attribute width
-    """
-    return self.__width
+    @property
+    def height(self):
+        """
+        Getter
+        Return private instance attribute height
+        """
+        return self.__height
 
+    @property
+    def x(self):
+        """
+        Getter
+        Return private instance attribute x
+        """
+        return self.__x
 
-@property
-def height(self):
-    """
-    Getter
-    Return private instance attribute height
-    """
-    return self.__height
+    @property
+    def y(self):
+        """
+        Getter
+        Return private instance attribute y
+        """
+        return self.__y
 
+    @width.setter
+    def width(self, value):
+        """
+        Setter
+        Arg = width : set width
+        """
+        self.__width = value
 
-@property
-def x(self):
-    """
-    Getter
-    Return private instance attribute x
-    """
-    return self.__x
+    @height.setter
+    def height(self, value):
+        """
+        Setter
+        Arg = height : set height
+        """
+        self.__height = value
 
+    @x.setter
+    def x(self, value):
+        """
+        Setter
+        Arg = x : set x
+        """
+        self.__x = value
 
-@property
-def y(self):
-    """
-    Getter
-    Return private instance attribute y
-    """
-    return self.__y
-
-
-@width.setter
-def width(self, value):
-    """
-    Setter
-    Arg = width : set width
-    """
-    self.__width = value
-
-
-@height.setter
-def height(self, value):
-    """
-    Setter
-    Arg = height : set height
-    """
-    self.__height = value
-
-
-@x.setter
-def x(self):
-    """
-    Setter
-    Arg = x : set x
-    """
-    self.__x = x
-
-
-@y.setter
-def y(self):
-    """
-    Setter
-    Arg = y : set y
-    """
-    self.__y = y
+    @y.setter
+    def y(self, value):
+        """
+        Setter
+        Arg = y : set y
+        """
+        self.__y = value
