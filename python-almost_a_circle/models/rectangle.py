@@ -26,6 +26,28 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def check_value_input_for_w_h(self, value, attr_name):
+        """
+        Validator for input
+        """
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(attr_name))
+        if value <= 0:
+            raise ValueError("{} must be > 0".format(attr_name))
+        else:
+            return value
+
+    def check_value_input_for_x_y(self, value, attr_name):
+        """
+        Validator for input
+        """
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(attr_name))
+        if value < 0:
+            raise ValueError("{} must be >= 0".format(attr_name))
+        else:
+            return value
+
     @property
     def width(self):
         """
@@ -64,7 +86,7 @@ class Rectangle(Base):
         Setter
         Arg = width : set width
         """
-        self.__width = value
+        self.__width = self.check_value_input_for_w_h(value, "width")
 
     @height.setter
     def height(self, value):
@@ -72,7 +94,7 @@ class Rectangle(Base):
         Setter
         Arg = height : set height
         """
-        self.__height = value
+        self.__height = self.check_value_input_for_w_h(value, "height")
 
     @x.setter
     def x(self, value):
@@ -80,7 +102,7 @@ class Rectangle(Base):
         Setter
         Arg = x : set x
         """
-        self.__x = value
+        self.__x = self.check_value_input_for_x_y(value, "x")
 
     @y.setter
     def y(self, value):
@@ -88,4 +110,4 @@ class Rectangle(Base):
         Setter
         Arg = y : set y
         """
-        self.__y = value
+        self.__y = self.check_value_input_for_x_y(value, "y")
