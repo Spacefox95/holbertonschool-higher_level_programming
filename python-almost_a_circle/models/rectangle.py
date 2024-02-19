@@ -54,6 +54,15 @@ class Rectangle(Base):
         """
         return self.width * self.height
 
+    def display(self):
+        """
+        Print in the stdout the Rectangle instance
+        """
+        for i in range(self.height):
+            for j in range(self.width):
+                print('#', end='')
+            print()
+
     @property
     def width(self):
         """
