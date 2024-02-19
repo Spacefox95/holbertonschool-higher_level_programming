@@ -63,6 +63,13 @@ class Rectangle(Base):
                 print('#', end='')
             print()
 
+    def __str__(self):
+        """
+        Returns Rectangle carateristics
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
+
     @property
     def width(self):
         """
