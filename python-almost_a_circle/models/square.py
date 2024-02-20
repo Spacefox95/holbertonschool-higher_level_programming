@@ -22,6 +22,19 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.size = size
 
+    def update(self, *args, **kwargs):
+        """
+        Assign an argument to an attribute
+        """
+        if args:
+            attributes = ['id', 'size', 'x', 'y']
+            update_attributes = args[:len(attributes)]
+            list(map(lambda attr, value: setattr
+                     (self, attr, value), attributes, update_attributes))
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     def __str__(self):
         """
         Returns Square carateristics
