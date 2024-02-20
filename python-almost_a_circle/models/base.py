@@ -53,11 +53,14 @@ class Base:
     @classmethod
     def load_from_file(cls):
         filename = "{}.json".format(cls.__name__)
-        with open(filename, 'r') as file:
-            a = file.read()
-            loaded_data = cls.from_json_string(a)
-            instances = [cls.create(**data) for data in loaded_data]
-            return instances
+        try:
+            with open(filename, 'r') as file:
+                a = file.read()
+                loaded_data = cls.from_json_string(a)
+                instances = [cls.create(**data) for data in loaded_data]
+                return instances
+        except FileNotFoundError:
+            return []
 
     @staticmethod
     def to_json_string(list_dictionaries):
