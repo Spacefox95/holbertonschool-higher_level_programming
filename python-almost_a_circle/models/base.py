@@ -50,6 +50,15 @@ class Base:
             dummy_instance_2.update(**dictionary)
             return dummy_instance_2
 
+    @classmethod
+    def load_from_file(cls):
+        filename = "{}.json".format(cls.__name__)
+        with open(filename, 'r') as file:
+            a = file.read()
+            loaded_data = cls.from_json_string(a)
+            instances = [cls.create(**data) for data in loaded_data]
+            return instances
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
