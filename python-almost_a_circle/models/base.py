@@ -41,9 +41,14 @@ class Base:
         """
         Returns an instance with all attributes set
         """
-        dummy_instance = cls(width=1, height=1)
-        dummy_instance.update(**dictionary)
-        return dummy_instance
+        if cls.__name__ == "Rectangle":
+            dummy_instance = cls(width=1, height=1)
+            dummy_instance.update(**dictionary)
+            return dummy_instance
+        else:
+            dummy_instance_2 = cls(size=1)
+            dummy_instance_2.update(**dictionary)
+            return dummy_instance_2
 
     @staticmethod
     def to_json_string(list_dictionaries):
