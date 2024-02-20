@@ -36,6 +36,15 @@ class Base:
             file.write(cls.to_json_string(
                 [obj.to_dictionary()for obj in list_objs]))
 
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns an instance with all attributes set
+        """
+        dummy_instance = cls(width=1, height=1)
+        dummy_instance.update(**dictionary)
+        return dummy_instance
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
