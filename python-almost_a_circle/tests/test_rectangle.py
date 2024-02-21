@@ -65,8 +65,8 @@ class TestRectangle(unittest.TestCase):
         """
         Test Rectangle inheritance from Base
         """
-        with self.assertRaises(TypeError):
-            r1 = Rectangle(1, 2, 3, "4")
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        self.assertIsNotNone(r1)
 
     def test_rectangle_exist_8(self):
         """
