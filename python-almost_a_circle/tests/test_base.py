@@ -5,6 +5,11 @@ import unittest
 from models.base import Base
 
 
-class TestFoo(unittest.TestCase):
-    def test_foo(self):
-        self.assertTrue(True)
+class TestBase(unittest.TestCase):
+    def test_assign_id(self):
+        """
+        Create instances of Base and assign to check id
+        """
+        obj_1 = Base()
+
+        self.assertEqual(obj_1.id, 1)
