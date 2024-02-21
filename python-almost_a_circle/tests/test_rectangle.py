@@ -15,7 +15,7 @@ class TestRectangle(unittest.TestCase):
         Test Rectangle inheritance from Base
         """
         r1 = Rectangle(1, 2)
-        self.assertIsNotNone(r1)
+        self.assertIsNotNone(r1, "Rectangle(1, 2) exists")
 
     def test_rectangle_exist_1(self):
         """
@@ -53,6 +53,48 @@ class TestRectangle(unittest.TestCase):
             r1 = Rectangle(1, 2, "3")
 
     def test_rectangle_exist_6(self):
+        """
+        Test Rectangle inheritance from Base
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 3, "4")
+
+    def test_rectangle_exist_7(self):
+        """
+        Test Rectangle inheritance from Base
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 3, "4")
+
+    def test_rectangle_exist_8(self):
+        """
+        Test Rectangle inheritance from Base
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 3, "4")
+
+    def test_rectangle_exist_9(self):
+        """
+        Test Rectangle inheritance from Base
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 3, "4")
+
+    def test_rectangle_exist_10(self):
+        """
+        Test Rectangle inheritance from Base
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 3, "4")
+
+    def test_rectangle_exist_11(self):
+        """
+        Test Rectangle inheritance from Base
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 3, "4")
+
+    def test_rectangle_exist_12(self):
         """
         Test Rectangle inheritance from Base
         """
