@@ -122,3 +122,17 @@ class TestRectangle(unittest.TestCase):
         """
         r1 = Rectangle(1, 1)
         self.assertEqual(r1.area(), 1)
+
+    def test_str_exist(self):
+        """
+        Test the str return
+        """
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(r1.__str__(), '[Rectangle] (12) 2/1 - 4/6' )
+
+    def test_display_exist_without_x_y(self):
+        """
+        Test the display function
+        """
+        r1 = Rectangle(3, 2)
+        self.assertEqual(r1.display(), None)
