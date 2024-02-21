@@ -115,3 +115,10 @@ class TestRectangle(unittest.TestCase):
         """
         with self.assertRaises(ValueError):
             r1 = Rectangle(1, 2, 3, -4)
+
+    def test_area_exist(self):
+        """
+        Test the area function
+        """
+        r1 = Rectangle(1, 1)
+        self.assertEqual(r1.area(), 1)
