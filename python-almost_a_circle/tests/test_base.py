@@ -33,3 +33,23 @@ class TestBase(unittest.TestCase):
         b4 = Base(89)
         self.assertEqual(b4.id, 89)
 
+    def test_to_json_string_None(self):
+        """
+        Test Base JSON string representation of None
+        """
+        json_dictionary = Base.to_json_string(None)
+        self.assertEqual(json_dictionary, "[]")
+
+    def test_to_json_string_empty(self):
+        """
+        Test Base JSON string representation of empty bracket
+        """
+        json_dictionary = Base.to_json_string([])
+        self.assertEqual(json_dictionary, "[]")
+
+    def test_to_json_string_full(self):
+        """
+        Test Base JSON string representation of full bracket
+        """
+        json_dictionary = Base.to_json_string([ { 'id' : 12}])
+        self.assertEqual(json_dictionary, '[{"id": 12}]')
