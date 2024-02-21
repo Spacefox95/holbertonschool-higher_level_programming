@@ -136,3 +136,25 @@ class TestRectangle(unittest.TestCase):
         """
         r1 = Rectangle(3, 2)
         self.assertEqual(r1.display(), None)
+
+    def test_display_exist_without_y(self):
+        """
+        Test the display function
+        """
+        r1 = Rectangle(3, 2, 1)
+        self.assertEqual(r1.display(), None)
+
+
+    def test_display_exist(self):
+        """
+        Test the display function
+        """
+        r1 = Rectangle(3, 2, 1, 1)
+        self.assertEqual(r1.display(), None)
+
+    def test_to_dictionary(self):
+        """
+        Test the function that return a dict representation of rectangle
+        """
+        r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.to_dictionary(), {'id': 21, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
