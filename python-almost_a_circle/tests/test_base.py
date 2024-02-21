@@ -53,3 +53,27 @@ class TestBase(unittest.TestCase):
         """
         json_dictionary = Base.to_json_string([ { 'id' : 12}])
         self.assertEqual(json_dictionary, '[{"id": 12}]')
+
+    def test_from_json_string_None(self):
+        """
+        Test Base for None list of the JSON string representation
+        """
+        json_list_input = Base.to_json_string(None)
+        list_output = Base.from_json_string(json_list_input)
+        self.assertEqual(list_output, [])
+
+    def test_from_json_string_empty(self):
+        """
+        Test Base for empty list of the JSON string representation
+        """
+        json_list_input = Base.to_json_string([])
+        list_output = Base.from_json_string(json_list_input)
+        self.assertEqual(list_output, [])
+
+    def test_from_json_string_full(self):
+        """
+        Test Base for full list of the JSON string representation
+        """
+        json_list_input = Base.to_json_string('[{ "id": 89 }]')
+        list_output = Base.from_json_string(json_list_input)
+        self.assertEqual(list_output, '[{ "id": 89 }]')
