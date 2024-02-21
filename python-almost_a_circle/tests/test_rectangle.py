@@ -66,7 +66,13 @@ class TestRectangle(unittest.TestCase):
         Test Rectangle inheritance from Base
         """
         r1 = Rectangle(1, 2, 3, 4, 5)
-        self.assertIsNotNone(r1)
+        self.assertIsInstance(r1, Rectangle)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 3)
+        self.assertEqual(r1.y, 4)
+        self.assertEqual(r1.id, 5)
+
 
     def test_rectangle_exist_8(self):
         """
