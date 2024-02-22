@@ -182,7 +182,7 @@ class TestRectangle(unittest.TestCase):
         Test the function that return a dict representation of rectangle
         """
         r1 = Rectangle(10, 2, 1, 9)
-        self.assertEqual(r1.to_dictionary(), {'id': 21, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
+        self.assertEqual(r1.to_dictionary(), {'id': 22, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
 
     def test_update(self):
         """
@@ -195,3 +195,16 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.height, 8)
         self.assertEqual(r.x, 9)
         self.assertEqual(r.y, 10)
+
+    def test_create(self):
+        """
+        Test that the create function exist
+        """
+        r1 = Rectangle(id=89, width=1, height=2, x=3, y=4)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertEqual(r2.id, 89)
+        self.assertEqual(r2.width, 1)
+        self.assertEqual(r2.height, 2)
+        self.assertEqual(r2.x, 3)
+        self.assertEqual(r2.y, 4)
