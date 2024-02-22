@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""
-Unittest for max_integer([..])
-"""
+'''Module for Rectangle unit tests.'''
 import unittest
+import json
+import sys
+import os
+
+
+from io import StringIO
+from models.base import Base
 from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestRectangle(unittest.TestCase):
@@ -129,12 +135,53 @@ class TestRectangle(unittest.TestCase):
         """
         r1 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(r1.__str__(), '[Rectangle] (12) 2/1 - 4/6' )
+
+    def test_display_without_x_y(self):
+        """Test display() whihout x and y"""
+        r1 = Rectangle(1, 2)
+        expected_output = "#\n#\n"
+
+        original_stdout = sys.stdout
+        sys.stdout = StringIO()
+
+        r1.display()
+        displayed_output = sys.stdout.getvalue()
+        sys.stdout = original_stdout
+        self.assertEqual(displayed_output, expected_output)
+
+    def test_display_without_y(self):
+        """Test display() whitout y"""
+        r1 = Rectangle(1, 2, 1)
+        expected_output = " #\n #\n"
+
+        original_stdout = sys.stdout
+        sys.stdout = StringIO()
+
+        r1.display()
+        displayed_output = sys.stdout.getvalue()
+
+        sys.stdout = original_stdout
+        self.assertEqual(displayed_output, expected_output)
+
+    def test_display(self):
+        """Test display() whitout y"""
+        r1 = Rectangle(1, 2, 1, 1)
+        expected_output = "\n #\n #\n"
+
+        original_stdout = sys.stdout
+        sys.stdout = StringIO()
+
+        r1.display()
+        displayed_output = sys.stdout.getvalue()
+
+        sys.stdout = original_stdout
+        self.assertEqual(displayed_output, expected_output)
     
     def test_to_dictionary(self):
         """
         Test the function that return a dict representation of rectangle
         """
         r1 = Rectangle(10, 2, 1, 9)
-        self.assertEqual(r1.to_dictionary(), {'id': 18, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
+        self.assertEqual(r1.to_dictionary(), {'id': 21, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
 
     
