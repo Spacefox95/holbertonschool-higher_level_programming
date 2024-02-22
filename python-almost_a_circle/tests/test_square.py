@@ -139,7 +139,6 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(list_output, expected_output)
         os.remove(filename)
 
-    def test_save_to_file_empty(self):
         """Test save_to_file([]) in Square."""
         filename = "Square.json"
         Square.save_to_file([])
