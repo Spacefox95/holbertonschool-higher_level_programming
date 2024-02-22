@@ -3,7 +3,6 @@
 Unittest for max_integer([..])
 """
 import unittest
-from unittest.mock import patch
 import io
 from models.rectangle import Rectangle
 
