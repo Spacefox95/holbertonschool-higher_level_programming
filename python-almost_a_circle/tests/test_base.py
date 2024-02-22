@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""
-Unittest for max_integer([..])
-"""
+'''Module for Base unit tests.'''
 import unittest
+import json
+import sys
+import os
+
+
+from io import StringIO
 from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBase(unittest.TestCase):
@@ -77,3 +83,6 @@ class TestBase(unittest.TestCase):
         json_list_input = Base.to_json_string('[{ "id": 89 }]')
         list_output = Base.from_json_string(json_list_input)
         self.assertEqual(list_output, '[{ "id": 89 }]')
+
+if __name__ == "__main__":
+    unittest.main()
