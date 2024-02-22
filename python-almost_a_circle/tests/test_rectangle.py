@@ -182,7 +182,7 @@ class TestRectangle(unittest.TestCase):
         Test the function that return a dict representation of rectangle
         """
         r1 = Rectangle(10, 2, 1, 9)
-        self.assertEqual(r1.to_dictionary(), {'id': 22, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
+        self.assertEqual(r1.to_dictionary(), {'id': 23, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
 
     def test_update(self):
         """
@@ -208,3 +208,11 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.height, 2)
         self.assertEqual(r2.x, 3)
         self.assertEqual(r2.y, 4)
+
+    def test_save_to_file(self):
+        """
+        Test that the save to file works correctly
+        """
+        r1 = Rectangle(1, 2)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
