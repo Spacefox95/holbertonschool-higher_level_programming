@@ -226,15 +226,27 @@ class TestRectangle(unittest.TestCase):
         """
         Test that the save to file works correctly
         """
+        filename = "Rectangle.json"
         Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            list_output = json.load(f)
+        expected_output = []
         self.assertTrue(os.path.exists("Rectangle.json"))
+        self.assertEqual(list_output, expected_output)
+        os.remove(filename)
     
     def test_save_to_file_full(self):
         """
         Test that the save to file works correctly
         """
+        filename = "Rectangle.json"
         Rectangle.save_to_file([Rectangle(1, 2)])
+        with open("Rectangle.json", "r") as f:
+            list_output = json.load(f)
+        expected_output = [{'id': 22, 'width': 1, 'height': 2, 'x': 0, 'y': 0}]
         self.assertTrue(os.path.exists("Rectangle.json"))
+        self.assertEqual(list_output, expected_output)
+        os.remove(filename)
 
     def test_load_from_file_none(self):
         """"
