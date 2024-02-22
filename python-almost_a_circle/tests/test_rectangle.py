@@ -227,12 +227,14 @@ class TestRectangle(unittest.TestCase):
         Test that the save to file works correctly
         """
         filename = "Rectangle.json"
+
         Rectangle.save_to_file([])
-        with open("Rectangle.json", "r") as f:
-            list_output = json.load(f)
-        expected_output = []
-        self.assertTrue(os.path.exists("Rectangle.json"))
-        self.assertEqual(list_output, expected_output)
+        self.assertTrue(os.path.exists(filename))
+        
+        with open(filename, "r") as f:
+            file_content = f.read()
+
+        self.assertEqual(file_content, "[]")
         os.remove(filename)
     
     def test_save_to_file_full(self):
