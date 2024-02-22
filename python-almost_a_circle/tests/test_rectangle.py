@@ -209,10 +209,32 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.x, 3)
         self.assertEqual(r2.y, 4)
 
-    def test_save_to_file(self):
+    def test_save_to_file_none(self):
         """
         Test that the save to file works correctly
         """
-        r1 = Rectangle(1, 2)
-        self.assertEqual(r1.width, 1)
-        self.assertEqual(r1.height, 2)
+        Rectangle.save_to_file(None)
+        self.assertTrue(os.path.exists("Rectangle.json"))
+
+    def test_save_to_file_empty(self):
+        """
+        Test that the save to file works correctly
+        """
+        Rectangle.save_to_file([])
+        self.assertTrue(os.path.exists("Rectangle.json"))
+    
+    def test_save_to_file_full(self):
+        """
+        Test that the save to file works correctly
+        """
+        Rectangle.save_to_file([Rectangle(1, 2)])
+        self.assertTrue(os.path.exists("Rectangle.json"))
+
+    def test_load_from_file_none(self):
+        """"
+        Test that the load file function works correctly
+        """
+        list_rectangles_input = None
+        Rectangle.save_to_file(list_rectangles_input)
+        Rectangle.load_from_file()
+        self.assertTrue(os.path.exists("Rectangle.json"))
