@@ -174,6 +174,9 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.to_dictionary(), {'id': 21, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
 
     def test_to_update(self):
+        """
+        Test the update function
+        """
         r1 = Rectangle(10, 10, 10, 10)
         r1.update(id=0, width=0, height=0, x=0, y=0)
         self.assertEqual(r1.id, 0)
