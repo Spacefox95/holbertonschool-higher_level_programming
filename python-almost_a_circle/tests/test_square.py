@@ -66,22 +66,16 @@ class TestSquare(unittest.TestCase):
         """
         s1 = Square(1, 2, 3, 4)
         self.assertIsNotNone(s1)
-
-    def test_square_exist_7(self):
         """
         Test Rectangle inheritance from Base
         """
         with self.assertRaises(ValueError):
             s1 = Square(-1)
-    
-    def test_square_exist_8(self):
         """
         Test Rectangle inheritance from Base
         """
         with self.assertRaises(ValueError):
             s1 = Square(1, -2)
-    
-    def test_square_exist_7(self):
         """
         Test Rectangle inheritance from Base
         """
