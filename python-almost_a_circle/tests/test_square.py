@@ -29,6 +29,7 @@ class TestSquare(unittest.TestCase):
         Test Rectangle inheritance from Base
         """
         s1 = Square(1, 2)
+        self.assertIsInstance(s1, Square)
         self.assertIsNotNone(s1)
     
     def test_square_exist_2(self):
