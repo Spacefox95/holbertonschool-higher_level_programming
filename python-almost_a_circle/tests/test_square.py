@@ -131,3 +131,53 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r2.size, 1)
         self.assertEqual(r2.x, 3)
         self.assertEqual(r2.y, 4)
+
+    def test_save_to_file_none(self):
+        """
+        Test that the save to file works correctly
+        """
+        filename = "Rectangle.json"
+        Square.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            list_output = json.load(f)
+        expected_output = []
+        self.assertTrue(os.path.exists("Rectangle.json"))
+        self.assertEqual(list_output, expected_output)
+        os.remove(filename)
+
+    def test_save_to_file_empty(self):
+        """
+        Test that the save to file works correctly
+        """
+        filename = "Rectangle.json"
+
+        Square.save_to_file([])
+        self.assertTrue(os.path.exists(filename))
+        
+        with open(filename, "r") as f:
+            file_content = f.read()
+
+        self.assertEqual(file_content, "[]")
+        os.remove(filename)
+    
+    def test_save_to_file_full(self):
+        """
+        Test that the save to file works correctly
+        """
+        filename = "Rectangle.json"
+        Square.save_to_file([Rectangle(1, 2)])
+        with open("Rectangle.json", "r") as f:
+            list_output = json.load(f)
+        expected_output = [{'id': 22, 'width': 1, 'height': 2, 'x': 0, 'y': 0}]
+        self.assertTrue(os.path.exists("Rectangle.json"))
+        self.assertEqual(list_output, expected_output)
+        os.remove(filename)
+
+    def test_load_from_file_none(self):
+        """"
+        Test that the load file function works correctly
+        """
+        list_rectangles_input = None
+        Square.save_to_file(list_rectangles_input)
+        Square.load_from_file()
+        self.assertTrue(os.path.exists("Rectangle.json"))
