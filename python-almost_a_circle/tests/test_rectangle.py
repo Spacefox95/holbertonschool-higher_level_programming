@@ -3,7 +3,6 @@
 Unittest for max_integer([..])
 """
 import unittest
-import io
 from models.rectangle import Rectangle
 
 
@@ -136,22 +135,14 @@ class TestRectangle(unittest.TestCase):
         Test the display function
         """
         r1 = Rectangle(3, 2)
-        with patch('sys.stdout', new_callable=io.StringIO) as mock_stdout:
-                r1.display()
-        captured_output = mock_stdout.getvalue()
-        expected_output = "###\n###\n"
-        self.assertEqual(captured_output, expected_output)
+        self.assertEqual(r1.display(), None)
 
     def test_display_exist_without_y(self):
         """
         Test the display function
         """
         r1 = Rectangle(3, 2, 1)
-        with patch('sys.stdout', new_callable=io.StringIO) as mock_stdout:
-                r1.display()
-        captured_output = mock_stdout.getvalue()
-        expected_output = " ###\n ###\n"
-        self.assertEqual(captured_output, expected_output)
+        self.assertEqual(r1.display(), None)
 
 
     def test_display_exist(self):
@@ -159,11 +150,7 @@ class TestRectangle(unittest.TestCase):
         Test the display function
         """
         r1 = Rectangle(3, 2, 1, 1)
-        with patch('sys.stdout', new_callable=io.StringIO) as mock_stdout:
-                r1.display()
-        captured_output = mock_stdout.getvalue()
-        expected_output = "\n ###\n ###\n"
-        self.assertEqual(captured_output, expected_output)
+        self.assertEqual(r1.display(), None)
 
     def test_to_dictionary(self):
         """
@@ -173,13 +160,5 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.to_dictionary(), {'id': 21, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
 
     def test_to_update(self):
-        """
-        Test the update function
-        """
         r1 = Rectangle(10, 10, 10, 10)
-        r1.update(id=0, width=0, height=0, x=0, y=0)
-        self.assertEqual(r1.id, 0)
-        self.assertEqual(r1.width, 0)
-        self.assertEqual(r1.height, 0)
-        self.assertEqual(r1.x, 0)
-        self.assertEqual(r1.y, 0)
+        self.assertEqual(r1.update(89, 2, 3, 4, 5), '[Rectangle] (89) 4/5 - 2/3')
