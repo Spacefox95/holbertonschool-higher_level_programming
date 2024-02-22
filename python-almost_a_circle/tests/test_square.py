@@ -146,17 +146,12 @@ class TestSquare(unittest.TestCase):
         os.remove(filename)
 
     def test_save_to_file_empty(self):
-        """
-        Test that the save to file works correctly
-        """
+        """Test save_to_file([]) in Square."""
         filename = "Square.json"
-
         Square.save_to_file([])
         self.assertTrue(os.path.exists(filename))
-        
         with open(filename, "r") as f:
             file_content = f.read()
-
         self.assertEqual(file_content, "[]")
         os.remove(filename)
     
@@ -181,3 +176,6 @@ class TestSquare(unittest.TestCase):
         Square.save_to_file(list_rectangles_input)
         Square.load_from_file()
         self.assertTrue(os.path.exists("Square.json"))
+
+if __name__ == "__main__":
+    unittest.main()
