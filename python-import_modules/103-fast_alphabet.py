@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+a = chr(range(90)[0])
+print(a)
