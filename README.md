@@ -21,9 +21,7 @@ This repository is dedicated to learn Python. It includes an apprenticeship of O
 - `python-almost_a_circle`: Review of all learning and *args and **kwargs.
 - `python-object-relational mapping`: See later.
 
-## Functions and modules used
-
-### Modules imported
+## Modules imported
 
 - cmd
 - uuid
