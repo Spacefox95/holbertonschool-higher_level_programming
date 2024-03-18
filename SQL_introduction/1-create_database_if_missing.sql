@@ -1,2 +1,2 @@
--- 3 first students in the Batch ID=3
+-- create a database
 CREATE DATABASE IF NOT EXISTS hbtn_0c_0
