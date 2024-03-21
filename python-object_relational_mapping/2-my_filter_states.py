@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 """
 Script that display all values in the states table
 that matches the argument
@@ -21,8 +19,9 @@ if __name__ == "__main__":
         port=3306)
 
     cursor = db.cursor()
-    cmd = "SELECT * FROM states WHERE states.name = %s ORDER BY states.id"
-    cursor.execute(cmd, (sys.argv[4],))
+    cursor.execute(
+        "SELECT * FROM states WHERE states.name = %s ORDER BY states.id",
+        (sys.argv[4],))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
