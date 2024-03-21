@@ -25,6 +25,7 @@ if __name__ == "__main__":
            ORDER BY states.id ASC"
     cursor.execute(cmd, (sys.argv[4],))
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    american_state = [row[1] for row in rows]
+    output = ", ".join(american_state)
+    print(output)
     db.close()
