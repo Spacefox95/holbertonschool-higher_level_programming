@@ -20,10 +20,9 @@ if __name__ == "__main__":
     """
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).order_by(State.id).all()
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
-        break
-    if state not in states:
+    states = session.query(State).order_by(State.id).first()
+    if states:
+        print("{}: {}".format(states.id, states.name))
+    else:
         print("Nothing")
     session.close()
