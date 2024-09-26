@@ -1,10 +1,8 @@
 # SQL - Introduction
 
-<img src="./img/sql_project_banner.jpg">
-
 ## Description
 
-This directory is dedicated to learning the fundamentals of **SQL** (Structured Query Language) and database management. The goal of this project is to understand the core concepts of relational databases, perform basic SQL operations, and manipulate MySQL databases. Throughout the project, you'll be writing SQL scripts to create databases, tables, and manage data through queries. The tasks will also cover data definition and manipulation languages (DDL & DML), such as creating and modifying structures, and working with MySQL built-in functions.
+This directory is dedicated to learning the fundamentals of **SQL** (Structured Query Language) and database management. The goal of this project is to understand the core concepts of relational databases, perform basic SQL operations, and manipulate MySQL databases. Throughout the project, I'll be writing SQL scripts to create databases, tables, and manage data through queries. The tasks will also cover data definition and manipulation languages (DDL & DML), such as creating and modifying structures, and working with MySQL built-in functions.
 
 ## :file_folder: Concepts
 
