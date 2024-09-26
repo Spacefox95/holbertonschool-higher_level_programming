@@ -23,7 +23,7 @@ This project delves into the fundamental principles of object-oriented programmi
 8. **Understanding memory management** - Explore Python's handling of mutable and immutable types in functions.
 ...
 
-This project is designed to strengthen your understanding of Python's object model and enhance your programming skills through practical tasks and examples.
+This project is designed to strengthen my understanding of Python's object model and enhance my programming skills through practical tasks and examples.
 
 ---
 
