@@ -1,12 +1,20 @@
 # Python - Object-relational Mapping
 
-## General Objectives
+## Description
 
-- How to connect to a MySQL database from a Python script
-- How to SELECT rows in a MySQL table from a Python script
-- How to INSERT rows in a MySQL table from a Python script
-- What ORM (Object-Relational Mapping) means
-- How to map a Python Class to a MySQL table
+This directory is dedicated to learning the fundamentals of **Object-Relational Mapping (ORM)**, which is a technique that allows interaction between Python code and relational databases, such as MySQL. The goal of this project is to understand how to bridge the gap between Python classes and database tables by using ORM techniques, primarily through **SQLAlchemy**. Throughout the project, I'll be writing Python scripts to map classes to database tables, retrieve and manipulate data, and establish connections to MySQL databases. The tasks will cover various SQL operations, secure queries, and ORM concepts, enabling efficient and secure data handling.
+
+## :file_folder: Concepts
+
+- **Object-Relational Mapping (ORM)**: Understanding the principles of ORM and how it connects Python objects with database tables.
+- **SQLAlchemy**: Introduction to SQLAlchemy, a powerful ORM library for Python.
+- **Database connection**: How to connect Python scripts to MySQL databases.
+- **Class-to-table mapping**: Creating Python classes that represent database tables.
+- **Data retrieval and manipulation**: Querying, inserting, updating, and deleting records using Python code.
+- **SQL Injection**: Learning how to prevent SQL injection vulnerabilities in database queries.
+- **SQLAlchemy queries**: Using ORM to perform database queries, with a focus on clean and secure data retrieval.
+- **Relationships**: Managing one-to-many and many-to-many relationships between tables through Python objects.
+
 
 ## Tasks
 
