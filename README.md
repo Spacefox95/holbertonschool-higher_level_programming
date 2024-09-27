@@ -47,6 +47,6 @@ Also, SQL with tables and queries was a lot of information to learn and remenber
 ## Author
 
 - Nathan Raynal
-	- I'm a fullstack developper aspirer. I decided to become dev because I like to solve problems and create beautiful things.
-		- My LinkedIn : [LinkedIn] (https://www.linkedin.com/in/nathan-raynal-95a462296/)
-		- My Portfolio Project : [Cartotrac Intranet] (https://github.com/Spacefox95/Portofolio-Project)
+	- "I'm a fullstack developper aspirer. I decided to become dev because I like to solve problems and create beautiful things."
+		- My LinkedIn : https://www.linkedin.com/in/nathan-raynal-95a462296/
+		- My Portfolio Project : https://github.com/Spacefox95/Portofolio-Project
